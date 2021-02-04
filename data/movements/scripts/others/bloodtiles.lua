@@ -1,7 +1,7 @@
 local tileExceptions = {Position(33023, 32330, 10), Position(33023, 32331, 10), Position(33024, 32332, 10), Position(33025, 32332, 10)}
 
 function onAddItem(moveitem, tileitem, position)
-	if isInArray(tileExceptions, position) then
+	if table.contains(tileExceptions, position) then
 		return true
 	end
 

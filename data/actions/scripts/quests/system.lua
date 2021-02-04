@@ -112,7 +112,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		end
 	end
 
-	if isInArray(hotaQuest, item.uid) then
+	if table.contains(hotaQuest, item.uid) then
 		if player:getStorageValue(Storage.TheAncientTombs.DefaultStart) ~= 1 then
 			player:setStorageValue(Storage.TheAncientTombs.DefaultStart, 1)
 		end

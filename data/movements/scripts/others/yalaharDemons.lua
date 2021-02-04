@@ -21,7 +21,7 @@ function onStepIn(creature, item, position, fromPosition)
 		local tmpItem = items[i]
 
 		-- Looking for specific item ids (sacrifice ids)
-		if isInArray({8298, 8299, 8302, 8303}, tmpItem:getId()) then
+		if table.contains({8298, 8299, 8302, 8303}, tmpItem:getId()) then
 			-- Teleport Player
 			player:teleportTo(flame.destination)
 			position:sendMagicEffect(CONST_ME_HITBYFIRE)

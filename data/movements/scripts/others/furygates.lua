@@ -22,7 +22,7 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if isInArray({9710, 9711, 9712, 9713, 9714, 9716}, item.actionid) then
+	if table.contains({9710, 9711, 9712, 9713, 9714, 9716}, item.actionid) then
 		local gate = gates[item.actionid]
 		if not gate then
 			return true

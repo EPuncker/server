@@ -41,7 +41,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return true
 	end
 
-	if isInArray(config.leverPositions, toPosition) then
+	if table.contains(config.leverPositions, toPosition) then
 		item:transform(1946)
 		addEvent(revertLever, config.leverTime * 1000, toPosition)
 		return true

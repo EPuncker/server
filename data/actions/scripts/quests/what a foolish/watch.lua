@@ -9,7 +9,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 
 	local playerPos = player:getPosition()
-	if not isInArray(targetDestination, playerPos) then
+	if not table.contains(targetDestination, playerPos) then
 		return false
 	end
 

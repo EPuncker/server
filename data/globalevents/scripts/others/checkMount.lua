@@ -14,7 +14,7 @@ function onThink(interval)
 		end
 
 		outfit = player:getOutfit()
-		if isInArray(mountIds, outfit.lookMount) then
+		if table.contains(mountIds, outfit.lookMount) then
 			outfit.lookMount = nil
 			player:setOutfit(outfit)
 		end

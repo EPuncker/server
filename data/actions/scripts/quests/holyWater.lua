@@ -70,7 +70,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 
 	-- Shadow Nexus
-	if isInArray({8753, 8755, 8757}, target.itemid) then
+	if table.contains({8753, 8755, 8757}, target.itemid) then
 		target:transform(target.itemid + 1)
 		target:decay()
 		nexusMessage(player, player:getName() .. ' damaged the shadow nexus! You can\'t damage it while it\'s burning.')

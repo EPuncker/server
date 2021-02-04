@@ -3,7 +3,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	if isInArray({7913, 7914}, item.itemid) then
+	if table.contains({7913, 7914}, item.itemid) then
 		toPosition.y = toPosition.y + (item.itemid == 7913 and 1 or -1)
 		local machineItem = Tile(toPosition):getItemById(item.itemid == 7913 and 7914 or 7913)
 		if machineItem then

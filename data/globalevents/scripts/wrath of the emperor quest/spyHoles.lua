@@ -16,7 +16,7 @@ function onThink(interval, lastExecution)
 	local item
 	for i = 1, #positions do
 		item = Tile(positions[i]):getThing(1)
-		if item and isInArray({12213, 12214}, item.itemid) then
+		if item and table.contains({12213, 12214}, item.itemid) then
 			item:transform(item.itemid == 12213 and 12214 or 12213)
 		end
 	end

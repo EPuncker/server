@@ -19,7 +19,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local items = tile:getItems()
 	for i = 1, tile:getItemCount() do
 		local tmpItem = items[i]
-		if isInArray({7122, 5770}, tmpItem:getId()) then
+		if table.contains({7122, 5770}, tmpItem:getId()) then
 			tmpItem:remove()
 		end
 	end

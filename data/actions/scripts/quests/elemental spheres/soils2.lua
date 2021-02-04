@@ -13,7 +13,7 @@ local globalTable = {
 }
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if not isInArray({7917, 7918, 7913, 7914}, target.itemid) then
+	if not table.contains({7917, 7918, 7913, 7914}, target.itemid) then
 		return false
 	end
 
@@ -21,11 +21,11 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	if not isInArray(spheres[item.itemid], player:getVocation():getId()) then
+	if not table.contains(spheres[item.itemid], player:getVocation():getId()) then
 		return false
 	end
 
-	if isInArray({7917, 7918}, target.itemid) then
+	if table.contains({7917, 7918}, target.itemid) then
 		player:say('Turn off the machine first.', TALKTYPE_MONSTER_SAY)
 		return true
 	end

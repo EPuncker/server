@@ -3,7 +3,7 @@ local millstones = {1381, 1382, 1383, 1384}
 local dough = {6277, 8846}
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if item.itemid == 2692 and isInArray(liquidContainers, target.itemid) then
+	if item.itemid == 2692 and table.contains(liquidContainers, target.itemid) then
 		if target.type == 1 then
 			item:transform(item.itemid, item.type - 1)
 			player:addItem(2693, 1)
@@ -13,7 +13,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			player:addItem(6277, 1)
 			target:transform(target.itemid, 0)
 		end
-	elseif isInArray(dough, item.itemid) then
+	elseif table.contains(dough, item.itemid) then
 		if target.itemid == 1786 then
 			item:transform(item.itemid + 1)
 		elseif target.itemid == 6574 then
@@ -22,7 +22,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		end
 	elseif item.itemid == 2693 and target.itemid == 1786 then
 		item:transform(2689)
-	elseif isInArray(millstones, target.itemid) then
+	elseif table.contains(millstones, target.itemid) then
 		item:transform(item.itemid, item.type - 1)
 		player:addItem(2692, 1)
 	else

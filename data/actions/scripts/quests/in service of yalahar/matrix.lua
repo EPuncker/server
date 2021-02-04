@@ -1,6 +1,6 @@
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if isInArray({7915, 7916}, target.itemid) and target.actionid == 100 then
-		if isInArray({9743, 9744}, item.itemid) and player:getStorageValue(Storage.InServiceofYalahar.MatrixState) < 1 then
+	if table.contains({7915, 7916}, target.itemid) and target.actionid == 100 then
+		if table.contains({9743, 9744}, item.itemid) and player:getStorageValue(Storage.InServiceofYalahar.MatrixState) < 1 then
 			player:setStorageValue(Storage.InServiceofYalahar.MatrixState, 1)
 			item:remove(1)
 			toPosition:sendMagicEffect(CONST_ME_MAGIC_BLUE)

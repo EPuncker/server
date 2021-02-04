@@ -11,7 +11,7 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if isInArray({3059, 3061}, item.uid) then
+	if table.contains({3059, 3061}, item.uid) then
 		player:teleportTo(Position(32157, 31125, 10))
 	elseif item.uid == 3060 then
 		if Tile(Position(32156, 31125, 10)):getItemById(1945) then

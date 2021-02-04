@@ -1,5 +1,5 @@
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if not isInArray({1786, 1787, 1788, 1789, 1790, 1791, 1792, 1793, 9911}, target.itemid) then
+	if not table.contains({1786, 1787, 1788, 1789, 1790, 1791, 1792, 1793, 9911}, target.itemid) then
 		return false
 	end
 
