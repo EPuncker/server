@@ -31,7 +31,6 @@
 		</defense>
 	</defenses>
 	<elements>
-		<element earthPercent="1" />
 		<element firePercent="1" />
 		<element holyPercent="90" />
 	</elements>

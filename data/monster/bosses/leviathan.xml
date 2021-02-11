@@ -38,7 +38,7 @@
 		<immunity invisible="1" />
 		<immunity drown="1" />
 	</immunities>
-	<voices interval="3000" chance="200">
+	<voices interval="3000" chance="20">
 		<voice sentence="CHHHRRRR" />
 		<voice sentence="HISSSS" />
 	</voices>

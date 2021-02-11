@@ -52,8 +52,8 @@
 		<immunity invisible="1" />
 	</immunities>
 	<summons maxSummons="4">
-		<summon name="Ancient Scarab" interval="1000" chance="2000" max="2" />
-		<summon name="Green Djinn" interval="1000" chance="1000" max="4" />
+		<summon name="Ancient Scarab" interval="1000" chance="20" max="2" />
+		<summon name="Green Djinn" interval="1000" chance="10" max="4" />
 	</summons>
 	<voices interval="2000" chance="7">
 		<voice sentence="No mortal or undead will steal my secrets!" />
